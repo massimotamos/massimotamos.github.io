@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Hello World! and Using Ledger Nano S for PGP"
 date:   2018-02-03 15:04:23
 categories: [pgp]
