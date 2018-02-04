@@ -27,6 +27,16 @@
           <nav class="cover-navigation navigation--social">
             <ul class="navigation">
 
+
+	    {% if site.author.pgpkey %}
+              <li class="navigation__item">
+              <a href="{{ site.author.pgpkey }}" title="{{ site.author.name }} PubKey" target="_blank">
+                <i class="icon icon-key"></i>
+                <span class="label">Public Key</span>
+              </a>
+            </li>
+	    {% endif %}
+
             {% if site.author.twitter_username %}
               <!-- Twitter -->
               <li class="navigation__item">
@@ -76,6 +86,7 @@
                 </a>
               </li>
             {% endif %}
+	    
 
             <!-- RSS -->
             <li class="navigation__item">

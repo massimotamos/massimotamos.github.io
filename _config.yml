@@ -12,6 +12,7 @@ author:
   facebook_username: kaansk
   github_username:  kaansk
   linkedin_username:  kaansk
+  pgpkey: 'https://pgp.mit.edu/pks/lookup?op=get&search=0xEE2DF9C09F2DB8D4'
 
 defaults:
   -
