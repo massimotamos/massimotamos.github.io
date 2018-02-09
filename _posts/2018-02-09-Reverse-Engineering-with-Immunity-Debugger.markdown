@@ -7,7 +7,7 @@ categories: [reverse]
 tags: [reverse, engineering, immunity, strings, executable]
 ---
 
-Reverse engineering is one of my favourite topics in CybSec. I haven't had any time to improve myself but from CTFs I have participated in and some seminars, I have some fundemental knowledge.
+Reverse engineering is one of my favourite topics in CybSec. I haven't had any time to improve myself but from CTFs I have participated in and some seminars, I have some fundamental knowledge.
 
 In this blog post, I'll be analyzing an executable provided for Malware lecture in Cyber Security MSc. by [Jaanus Kääp]. His seminar was so exciting and we surely learnt a lot. I'll be using basic commandline tools on Kali Linux and Immunity Debugger. All files can be found at [Task Repo].
 
