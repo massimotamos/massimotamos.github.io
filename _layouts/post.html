@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <article class="post-container post-container--single">
   <header class="post-header">
     <div class="post-meta">
@@ -15,6 +16,7 @@ layout: default
   <section class="post">
     {{ content }}
   </section>
+{% include share-bar.html %}
   {% if page.comments != false and site.disqus_shortname %}
 <div id="disqus_thread"></div>
 <script>
@@ -39,4 +41,5 @@ s.setAttribute('data-timestamp', +new Date());
 
 {% endif %}
 </article>
+
 {% if page.comments != false %}{% include disqus.html %}{% endif %}
