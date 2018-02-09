@@ -21,7 +21,7 @@ The setup I have:
 * Host machine: Windows 10
 * Guest machine: Kali Linux 2018.01 (Virtualbox)
 * Ledger Nano S with OpenPGP implementation. To install it on NanoS, go to Ledger manager app (chrome app) click 'Show developer Items' at the right bottom side and choose Open PGP (Developer)
-![image]({{ site.baseurl }}/assets/images/ledgermanager.png)
+![image]({{ site.baseurl }}/assets/images/post1/post1-1.png)
 
 
 *All implementation will be done on Linux machine. As far as I researched, there doesn't seem to be a working implementation for this on windows.*
@@ -29,7 +29,7 @@ The setup I have:
 Pre-configurations for Virtualbox Linux machine:
 * make sure to include USB slot available to guest machine.
 
-![image]({{ site.baseurl }}/assets/images/usbsettings.jpg)
+![image]({{ site.baseurl }}/assets/images/post1/post1-2.jpg)
 
 After booting up your Linux VM, you can try the shell script below which does the following:
 * Installs the smartcard daemon necessary to use our nano S
@@ -72,7 +72,7 @@ After booting up your Linux VM, you can try the shell script below which does th
 
 Executing this, your machine should be able to recognize Nano S. You can test this via ```pcsc_scan``` command. If its not getting recognized, try enabling/disabling nano S on Virtualbox Menus/Devices/Ledger Nano S [0200] as illustrated in picture below.
 
-![image]({{ site.baseurl }}/assets/images/pcscservice.png)
+![image]({{ site.baseurl }}/assets/images/post1/post1-3.png)
 
 If you have not generated OpenPGP keys, go to [OpenPGP Doc] page 13 and configure.
 
@@ -86,15 +86,15 @@ You Should see a screen like this and should copy the keygrip of Signature key:
 
 ```
     pub rsa2048 2017-08-25 [SC]
-    `` 7886147C4C2E5CE2A4B1546C831415DA94A9A15C``
-    `` Keygrip = DE2B63C13AB92EBD2D05C1021A9DAA2D40ECB564``
+    '' 7886147C4C2E5CE2A4B1546C831415DA94A9A15C''
+    '' Keygrip = DE2B63C13AB92EBD2D05C1021A9DAA2D40ECB564''
     uid [ultimate] cedric
     sub rsa2048 2017-08-25 [E]
-    `` 789E56872A0D9A5AC8AF9C2F8E95F2999EEC38C4``
-    `` Keygrip = 9D7C2EF8D84E3B31371A09DFD9A4B3EF72AB4ACE``
+    '' 789E56872A0D9A5AC8AF9C2F8E95F2999EEC38C4''
+    '' Keygrip = 9D7C2EF8D84E3B31371A09DFD9A4B3EF72AB4ACE''
     sub rsa2048 2017-08-28 [A]
-    `` 2D0E4FFFAA448AA2770C7F02C20B90E12F68F035``
-    `` Keygrip = 6D60CB58D9D66EE09804E7FE460E865A91F5E41A``
+    '' 2D0E4FFFAA448AA2770C7F02C20B90E12F68F035''
+    '' Keygrip = 6D60CB58D9D66EE09804E7FE460E865A91F5E41A''
 ```
 
 Replace {$Signature_KEY_ID} with Signature keygrip and issue the following command.
