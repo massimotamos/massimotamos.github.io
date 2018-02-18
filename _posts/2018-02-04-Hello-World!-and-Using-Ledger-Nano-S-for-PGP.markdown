@@ -82,7 +82,7 @@ To get {$KEY_ID}, issue the following command on shell to see your keys with key
 ```sh
 $gpg -k --with-subkey-fingerprint --with-keygrip YOUR-KEY-NAME-HERE(ex:KAAN)
 ```
-You Should see a screen like this and should copy the keygrip of Signature key:
+You Should see a screen like this and should copy the ID of Signature key (788... in the text below):
 
 ```
     pub rsa2048 2017-08-25 [SC]
@@ -97,7 +97,7 @@ You Should see a screen like this and should copy the keygrip of Signature key:
     '' Keygrip = 6D60CB58D9D66EE09804E7FE460E865A91F5E41A''
 ```
 
-Replace {$Signature_KEY_ID} with Signature keygrip and issue the following command.
+Replace {$Signature_KEY_ID} with Signature ID and issue the following command.
 ```
 $git config --global commit.gpgsign true
 $git config --global user.signingkey {$Signature_KEY_ID}
