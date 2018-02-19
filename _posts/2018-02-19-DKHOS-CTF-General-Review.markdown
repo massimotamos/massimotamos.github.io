@@ -21,7 +21,7 @@ After solving the first tasks we started to slow down with the harder ones. Ther
 ```
 Guys, do not forget why we are doing this. We are so close to make those children happy!
 ```
-After 4 sleepless nights, 2 workdays in between, couple of disputes among members, we actually did it!
+After 4 sleepless nights, 2 workdays in between, couple of disputes among members, we actually made it to the top between **478 teams** !
 
 ![image]({{ site.baseurl }}/assets/images/post3/post3-2.jpeg)
 
