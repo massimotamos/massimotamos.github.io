@@ -7,7 +7,7 @@ categories: [CTF]
 tags: [CTF, DKHOS]
 ---
 
-I got a text message on 10.01.2018 from one of the few people I enjoy working together on CTF.
+I got a text message on 10.01.2018 from one of the few people I enjoy working together on CTF competitions.
 
 ![image]({{ site.baseurl }}/assets/images/post3/post3-1.jpeg)
 
