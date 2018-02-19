@@ -37,10 +37,10 @@ From here, I'll talk about DKHOS CTF in details.
 Scenarios were taken from real-life situations and put together such in a way that solver actually learns by solving it. There was even a [Twitch] 'hacking royale' in where 3 people choosen amongst the best in Web category and were given a machine with 7 flags.
 
 Of course there were things I also didn't like and can consider these as great downsides.
-* Group challenges were meaningless. Especially the last one with potential 700 points. There were groups who couldnt even get this much points. Yes, its innovative. Yes we did enjoy it. But Potential 700 points was too much. NERF THIS!
+* Group challenges were meaningless. Especially the last one with potential 700 points. There were groups who couldnt even get this much points. Yes, its innovative. Yes we did enjoy it. But potential 700 points was too much. NERF THIS!
 * Naming conventions were absolutely odd-awkward. If the solution is understanding 'whatsapp service' from task's name 'naber' (whats up!? in TR) then this is not a hacking question. Period.
-* There were quite a number of cheating attempts we heard of. DKHOS team was successfull on monitoring and finding these but in the end even we were accused of minor cheating. We were expecting to at least getting some congratulations.
-* And the thing I disliked most is the actual problem in Turkey. Security, CybSec is just seen as red teaming. There were not even 1 hint of how these tasks should have been secured in the first place. As an Application Security Engineer with interest on blue teaming, next year I'm expecting an Attack and Defence style rather than Jeopardy.
+* There were quite a number of cheating attempts we heard of. DKHOS team was successful on monitoring and finding these but in the end even we were accused of minor cheating. We were expecting to at least getting some congratulations.
+* And the thing I disliked the most is the actual problem in Turkey. Security, CybSec is just seen as red teaming. There were not even 1 hint of how these tasks should have been secured in the first place. As an Application Security Engineer with interest on blue teaming, next year I'm expecting an Attack and Defence style rather than Jeopardy.
 
 All in all, we are the official winners now and learnt a lot in the way. I'll be publishing some writeups when I have more time.
 
