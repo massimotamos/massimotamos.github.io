@@ -38,11 +38,8 @@ Scenarios were taken from real-life situations and put together such in a way th
 
 Of course there were things I also didn't like and can consider these as great downsides.
 * Group challenges were meaningless. Especially the last one with potential 700 points. There were groups who couldnt even get this much points. Yes, its innovative. Yes we did enjoy it. But Potential 700 points was too much. NERF THIS!
-* In this hacking royale, people from [Invictus/Prodaft] were also providing information and possible alternatives. At a point, BURP Suite was mentioned and then all conversation went like 'Burp is like this, Burp is like that, everyone should use it and everything should be solved with it'. This is just like Javascript hype: 'If something can be done with Javascript, it DOES NOT MEAN you should do it with Javascript'. Yes we ARE aware that Burp makes things faster and it's really convenient but as an Application Security Engineer with Software development background, I would still prefer and recommend writing your scripts.
 * Naming conventions were absolutely odd-awkward. If the solution is understanding 'whatsapp service' from task's name 'naber' (whats up!? in TR) then this is not a hacking question. Period.
-* In some tasks, especially the one involving messaging apps, there were trolls.
-* There were quite a number of cheating attempts we heard of. DKHOS team was successfull on monitoring and finding these but in the end even we were accused of minor cheating. We were expecting to at least getting some congratulations but in the end it was clear: 'Turkiye'de hic bir basari cezasiz kalmaz.'
-* People are agressive-salty. I'm already aware that every group is putting their best efforts but being childish is a different thing...
+* There were quite a number of cheating attempts we heard of. DKHOS team was successfull on monitoring and finding these but in the end even we were accused of minor cheating. We were expecting to at least getting some congratulations.
 * And the thing I disliked most is the actual problem in Turkey. Security, CybSec is just seen as red teaming. There were not even 1 hint of how these tasks should have been secured in the first place. As an Application Security Engineer with interest on blue teaming, next year I'm expecting an Attack and Defence style rather than Jeopardy.
 
 All in all, we are the official winners now and learnt a lot in the way. I'll be publishing some writeups when I have more time.
