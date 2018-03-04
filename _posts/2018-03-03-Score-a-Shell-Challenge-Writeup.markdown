@@ -83,8 +83,8 @@ This code is doing the actual redirection but the rest of the code is also getti
 * A mini firewall preventing usage of ./ and ../ which should be bypassed
 * file_get_contents method
 
-So it was obvious to fuzz this "localfile paramter" and I set up my burp with loading the payloads. I generally use the payloads here: https://github.com/swisskyrepo/PayloadsAllTheThings . 
-Nice collection of different fields.
+So it was obvious to fuzz this "localfile parameter" and I set up my burp with loading the payloads. I generally use the payloads here: https://github.com/swisskyrepo/PayloadsAllTheThings . 
+Nice collection of different fields. Note here: I used the payloads on small amounts. After getting 10-15 responses, you can actually understand if it will work or not. No need to use entire file:).
 
 ![image]({{ site.baseurl }}/assets/images/post5/post5-9.jpg)
 
