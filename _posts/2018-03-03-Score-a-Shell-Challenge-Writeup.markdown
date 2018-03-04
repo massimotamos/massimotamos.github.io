@@ -46,11 +46,7 @@ https://scoreshell.certifiedsecure.org/log/login.php
 
 Utilized [hydra] to bruteforce the authentication mechanism but even after using big payloads including rockyou, it was clear that bruteforcing was not part of the challenge.
 
-In the meantime the scan results from [Netsparker] came and had interesting things:
-
-![image]({{ site.baseurl }}/assets/images/post5/post5-4.jpg)
-
-The only problem with Netsparker is, it does not disclose any detail on trial version. Yet especially this "Unexpected Redirect Response Body" was giving a big hint.
+While using burp suite, I came across a warning like "Unexpected Redirect Response Body" and it was giving a big hint.
 
 After a brief search in google, I set-up my burp suite and wanted to follow the requests/responses to see this "Response Body". To do that, after getting the initial request, burp should be 
 intercepting the redirection in order us to bypass it. Redirection will happen with HTTP Status code 302 and we need to change this to 200 to let browser render instead of redirect to login.php
@@ -244,7 +240,7 @@ upload-test.php and preventing any upload without these parameters.)
 In the upload-test.login I also identified the upload folder in "$destination = $_SERVER["DOCUMENT_ROOT"]."/images/"; " this was the same folder on my initial inspection so we do not need any more 
 abra kadabra to move around.
 
-Using the shell we uploaded and getting the flag with URL https://scoreshell.certifiedsecure.org/images/cw.gif.php:
+Using the shell we uploaded and getting the flag with URL https://scoreshell.certifiedsecure.org/images/shell.gif.php:
 
 ![image]({{ site.baseurl }}/assets/images/post5/post5-15.jpg)
 
