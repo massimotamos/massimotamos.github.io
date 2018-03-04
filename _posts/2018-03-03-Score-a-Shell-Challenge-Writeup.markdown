@@ -240,7 +240,8 @@ upload-test.php and preventing any upload without these parameters.)
 In the upload-test.login I also identified the upload folder in "$destination = $_SERVER["DOCUMENT_ROOT"]."/images/"; " this was the same folder on my initial inspection so we do not need any more 
 abra kadabra to move around.
 
-Using the shell we uploaded and getting the flag with URL https://scoreshell.certifiedsecure.org/images/shell.gif.php:
+Using the shell we uploaded and getting the flag with URL https://scoreshell.certifiedsecure.org/images/{YOURSHELL}.gif.php:
+
 
 ![image]({{ site.baseurl }}/assets/images/post5/post5-15.jpg)
 
