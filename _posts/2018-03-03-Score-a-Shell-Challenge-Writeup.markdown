@@ -7,7 +7,7 @@ categories: [writeup, challenge]
 tags: [CTF, certifiedsecure, scoreashell]
 ---
 
-As a part of the recruitment process with a company I wont name yet, I was tasked to capture the flag from [CertifiedSecure]'s "Score a Shell" challenge.
+I found the [CertifiedSecure] platform and started to work on "Score a Shell" challenge.
 
 [CertifiedSecure] is an online training platform providing challenges on different levels and training materials. From their introduction:
 
