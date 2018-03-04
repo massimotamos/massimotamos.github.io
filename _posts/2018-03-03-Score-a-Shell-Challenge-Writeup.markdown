@@ -257,24 +257,3 @@ Using the shell we uploaded and getting the flag with URL https://scoreshell.cer
 [hydra]: https://tools.kali.org/password-attacks/hydra
 [CertifiedSecure]: https://www.certifiedsecure.com
 
-
----
-
-### Forensic 300 - Hadi Hoppala vede Cuppala 
----
-
-Let's move the unnecessary talk aside and work on this fantastic challenge.
-
-
-
-![image]({{ site.baseurl }}/assets/images/post4/post4-9.jpg)
-
-
-
-[blog theme]: https://github.com/BlackrockDigital/startbootstrap-clean-blog/tree/gh-pages
-[7z]: http://www.7-zip.org
-[The Foundation for Children with Leukemia]: http://www.losev.org.tr
-[Invictus/Prodaft]: https://www.invictuseurope.com/
-[Siberyildiz]: https://www.siberyildiz.com/
-[Twitch]: https://www.twitch.tv/hackingwars
-
