@@ -16,7 +16,7 @@ Certified Secure exists to encourage and fulfill the growing interest in IT Secu
 making sure everybody can experience and enjoy IT security. Security is serious fun!
 ```
 
-The challenge I was assigned with was under "Essential Specialities". From here it was looking like a more demanding challenge comparing to others.
+The challenge I wanted to work on was under "Essential Specialities". From here it was looking like a more demanding challenge comparing to others.
 
 ![image]({{ site.baseurl }}/assets/images/post5/post5-1.jpg)
 
