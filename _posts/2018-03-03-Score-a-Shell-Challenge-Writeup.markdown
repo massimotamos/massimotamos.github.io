@@ -44,7 +44,7 @@ This robots.txt file could be of help. From here I also identified the /log/ pat
 https://scoreshell.certifiedsecure.org/log/login.php
 ```
 
-Utilized [hydra] to bruteforce the authentication mechanism but even after using big payloads including rockyou, it was clear that bruteforcing was not part of the challenge.
+Utilized [hydra] to bruteforce the authentication mechanism with small payloads, just to see the errors but it was obvious that this challenge was not about "brute forcing your way in".
 
 While using burp suite, I came across a warning like "Unexpected Redirect Response Body" and it was giving a big hint.
 
