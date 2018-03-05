@@ -5,6 +5,7 @@ title:  "Score a Shell Challenge Write-Up"
 date:   2018-03-04 15:04:23
 categories: [writeup, challenge]
 tags: [CTF, certifiedsecure, scoreashell]
+hidden: true
 ---
 
 I found the [CertifiedSecure] platform and started to work on "Score a Shell" challenge.
