@@ -3,8 +3,8 @@ layout: post
 comments: true
 title:  "Score a Shell Challenge Write-Up"
 date:   2018-03-04 15:04:23
-categories: [writeup, challenge]
-tags: [CTF, certifiedsecure, scoreashell]
+categories: []
+tags: []
 hidden: true
 ---
 
