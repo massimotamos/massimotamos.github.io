@@ -1,6 +1,6 @@
 # Site settings
 title: Kaan Sadık Karadağ's Blog
-description: 'Senior Consultant at Cyber Risk Advisory in Deloitte Netherlands.<br />A Cyber Security enthusiast, Computer Engineering BSc. holder, regularly participates in CTFs. Currently putting an epic battle with Cyber Security MSc. thesis.'
+description: 'Cyber Incident Response Team member. <br />Lives in Tallinn/Estonia. <br />A Cyber Security enthusiast, Computer Engineering BSc. holder, regularly participates in CTFs. Currently putting an epic battle with Cyber Security MSc. thesis.'
 baseurl: ''
 google_analytics: 'UA-113548627-1'
 disqus_shortname: 'kaansk'
@@ -9,8 +9,8 @@ URL: 'kaansk.github.io'
 author:
   name: 'Kaan Sadık Karadağ'
   email: kaansk@gmail.com
-  twitter_username: KaanSKaradag
-  facebook_username: kaansk
+  twitter_username:
+  facebook_username: 
   github_username:  kaansk
   linkedin_username:  kaansk
   pgpkey: 'https://pgp.mit.edu/pks/lookup?op=get&search=0xEE2DF9C09F2DB8D4'
