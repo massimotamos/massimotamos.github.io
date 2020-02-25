@@ -10,5 +10,5 @@ git config --global user.email "kaansk@gmail.com"
 git config --global user.name "Kaan S.Karadag"
 gpg --keyserver pgp.circl.lu --recv-keys 0xC87A8F9F5B2F03CB
 ssh-add
-git config --global user.signingkey E37FB1D2BFDC7895922CA6A2C87A8F9F5B2F03CB
-
+git config --global user.signingkey 0xC87A8F9F5B2F03CB
+gpg --card-status
