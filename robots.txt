@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /2018/Score-a-Shell-Challenge-Writeup/
 Disallow: /key/

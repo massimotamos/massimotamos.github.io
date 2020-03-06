@@ -1,19 +1,20 @@
 # Site settings
-title: Kaan Sadık Karadağ's Blog
-description: 'Cyber Incident Response Team member. <br />Lives in Tallinn/Estonia. <br />A Cyber Security enthusiast, Computer Engineering BSc. holder, regularly participates in CTFs. Currently putting an epic battle with Cyber Security MSc. thesis.'
+title: Massimo Tamos' Blog
+description: 'Software and Security Engineer. <br />Lives in Zürich. <br />A Cyber Security enthusiast, Computer Engineering Msc & MBA. 
+'
 baseurl: ''
-google_analytics: 'UA-113548627-1'
-disqus_shortname: 'kaansk'
-URL: 'kaansk.github.io'
+google_analytics: 'UA-159974639-1'
+disqus_shortname: 'blupadmamax@gmail.com'
+URL: 'massimotamos.github.io'
 
 author:
-  name: 'Kaan Sadık Karadağ'
-  email: kaansk@gmail.com
+  name: 'Massimo Tamos'
+  email: massimo.tamos@hotmail.com
   twitter_username:
-  facebook_username: 
-  github_username:  kaansk
-  linkedin_username:  kaansk
-  pgpkey: 'https://pgp.circl.lu/pks/lookup?op=get&search=0xC87A8F9F5B2F03CB'
+  facebook_username: massimotamos
+  github_username:  massimotamos
+  linkedin_username:  massimotamos
+  pgpkey: 'https://pgp.circl.lu/pks/lookup?op=get&search=0xC8'
 
 defaults:
   -
