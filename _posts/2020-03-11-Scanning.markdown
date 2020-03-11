@@ -1,0 +1,28 @@
+# Scanning
+
+### Enable O.S. detection, service version detection, vulnerability, script scanning, and traceroute.
+
+`sudo nmap 192.168.1.100 -A`
+
+### Calculate the Subnet & Range Scan
+
+`sudo apt-get install ipcalc`
+
+`ipcalc 192.168.0.32` 
+
+### Net scan with information about devices' services, fast
+
+nmap 192.168.1.0/24 -F
+
+### Net scan with information about devices' services, slow but accurate
+
+`nmap 192.168.1.0/24 -A`
+
+### arp-scan network discovery 
+It retrieves also the MAC addresses. Sometimes it reports devices that nmap misses.
+
+`namp -PR 192.168.1.0/24`
+
+### References:
+1. [null-byte.wonderhowto.com](https://null-byte.wonderhowto.com/how-to/tactical-nmap-for-beginner-network-reconnaissance-0189856/)
+2. [use ipcalc for subnetting](https://www.linux.com/tutorials/how-calculate-network-addresses-ipcalc/)
