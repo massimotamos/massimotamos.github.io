@@ -1,4 +1,3 @@
-# Scanning
 
 ### Enable O.S. detection, service version detection, vulnerability, script scanning, and traceroute.
 

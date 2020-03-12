@@ -1,4 +1,3 @@
-# SLMail Buffer Overflow
 
 For this excercise I followed step by step the guide provided by vulp3cula. 
 
