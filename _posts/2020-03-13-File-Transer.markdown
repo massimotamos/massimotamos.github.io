@@ -6,7 +6,7 @@ python -m SimpleHTTPServer 8000
 
 Or customizing:
 
-```
+```python
 #!/bin/python
 import SimpleHTTPServer
 import SocketServer
@@ -73,8 +73,7 @@ $ cat <&5
 
 Install atftpd package. Disable inetd and run systemd service. /srv/tftp is used for TFTP server directory.
 
-```console
-#!/bin/bash
+```bash
 $ sudo apt install -y atftpd
 $ sudo sed -e 's/^USE_INETD=true/USE_INETD=false/g' -i /etc/default/atftpd
 $ sudo systemctl enable atftpd

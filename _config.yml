@@ -44,3 +44,4 @@ kramdown:
 plugins: ['jekyll-paginate','jekyll-seo-tag', 'jekyll-redirect-from']
 exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
 include: ['.well-known', 'robots.txt']
+
