@@ -1,2 +1,3 @@
 User-agent: *
 Disallow: /key/
+Sitemap: https://massimotamos.com/index.html
