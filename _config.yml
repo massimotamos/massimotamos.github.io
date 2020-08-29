@@ -1,6 +1,6 @@
 # Site settings
 title: Massimo Tamos' Blog
-description: 'Software and Security Engineer. <br />Lives in Zürich. <br />A Cyber Security enthusiast, Security Engineering Msc, MBA, PMP, CISSP, CCSP, CEH.
+description: 'Software and Security Engineer. <br />Lives in Zürich. <br />A Cyber Security enthusiast, Security Engineering Msc, MBA, PMP, CISSP-ISSAP, CCSP, CEH.
 '
 baseurl: ''
 google_analytics: 'UA-159974639-1'
@@ -9,11 +9,12 @@ URL: 'massimotamos.github.io'
 
 author:
   name: 'Massimo Tamos'
-  email: massimo.tamos@hotmail.com
+  email: massimo.tamos@gmx.ch
   twitter_username:
   facebook_username: massimotamos
   github_username:  massimotamos
   linkedin_username:  massimotamos
+  link: www.massimotamos.com
   pgpkey: 'https://pgp.circl.lu/pks/lookup?op=get&search=0xC8'
 
 defaults:

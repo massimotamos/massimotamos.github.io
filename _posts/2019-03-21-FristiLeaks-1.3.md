@@ -87,6 +87,11 @@ tamosma@kali:~ nikto -h 192.168.1.106 -p 80
 + 8727 requests: 0 error(s) and 15 item(s) reported on remote host
 + End Time:           2020-03-21 17:41:55 (GMT-4) (22 seconds)
 ```
+Another way to achieve the same scanning results as above but with nmap:
+
+```nmap -A -O -p80 192.168.1.106```
+
+where -A and -O are related to the O.S. detection.
 
 No much, so let's look for vulnerabilities related to Apache, PHP 5.3.3 and CentOS.
 

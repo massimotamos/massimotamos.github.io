@@ -13,6 +13,10 @@
 
 nmap 192.168.1.0/24 -F
 
+### Effective port range scanning
+
+nmap 192.168.1.49 -p 1-65535
+
 ### Net scan with information about devices' services, slow but accurate
 
 `nmap 192.168.1.0/24 -A`
@@ -21,6 +25,10 @@ nmap 192.168.1.0/24 -F
 It retrieves also the MAC addresses. Sometimes it reports devices that nmap misses.
 
 `namp -PR 192.168.1.0/24`
+
+### Enumerate services behind a port:
+
+`nmap 192.168.1.49 -p 1-65535`
 
 ### References:
 1. [null-byte.wonderhowto.com](https://null-byte.wonderhowto.com/how-to/tactical-nmap-for-beginner-network-reconnaissance-0189856/)
